@@ -1,4 +1,35 @@
+import { useOutletContext } from 'react-router-dom'
+
 export default function Home() {
+  const { lang } = useOutletContext()
+
+  const t = {
+    en: {
+      h1: 'Small wooden love cards with a modern twist',
+      p1: 'We craft premium wood cards engraved with a QR code that links to a personalized edit you create from your photos, videos, and heartfelt messages.',
+      ctaOrder: 'Order yours',
+      ctaHow: 'How it works',
+      step1Title: '1. Send your memories',
+      step1Desc: 'Share photos, videos, and messages you want in the edit.',
+      step2Title: '2. We craft and encode',
+      step2Desc: 'We design your custom video edit and engrave a unique QR on the wooden card.',
+      step3Title: '3. Scan to relive',
+      step3Desc: 'Scanning the QR opens your private link to the edit—anytime, anywhere.',
+    },
+    mk: {
+      h1: 'Мали дрвени љубовни картички со модерен шмек',
+      p1: 'Изработуваме премиум дрвени картички со гравиран QR код што води до персонализиран едит што го креирате од вашите фотографии, видеа и искрени пораки.',
+      ctaOrder: 'Нарачај',
+      ctaHow: 'Како функционира',
+      step1Title: '1. Испрати ни спомени',
+      step1Desc: 'Сподели фотографии, видеа и пораки што ги сакаш во едитот.',
+      step2Title: '2. Ние креираме и кодираме',
+      step2Desc: 'Го дизајнираме твојот персонализиран видео едит и гравираме уникатен QR на дрвената картичка.',
+      step3Title: '3. Скенирај и оживеј',
+      step3Desc: 'Скенирањето на QR отвора приватен линк до едитот — секогаш и насекаде.',
+    },
+  }[lang]
+
   return (
     <section className="relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none" aria-hidden>
@@ -9,17 +40,17 @@ export default function Home() {
       <div className="max-w-6xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-10 items-center">
         <div>
           <h1 className="text-4xl md:text-5xl font-extrabold text-rose-800 leading-tight">
-            Small wooden love cards with a modern twist
+            {t.h1}
           </h1>
           <p className="mt-4 text-rose-700/90 text-lg">
-            We craft premium wood cards engraved with a QR code that links to a personalized edit you create from your photos, videos, and heartfelt messages.
+            {t.p1}
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <a href="/order" className="inline-flex items-center gap-2 px-5 py-3 rounded-md bg-rose-600 text-white font-medium shadow hover:bg-rose-700 transition-colors">
-              Order yours
+              {t.ctaOrder}
             </a>
             <a href="#how" className="inline-flex items-center gap-2 px-5 py-3 rounded-md border border-rose-300 text-rose-800 bg-white/70 hover:bg-white transition-colors">
-              How it works
+              {t.ctaHow}
             </a>
           </div>
         </div>
@@ -47,16 +78,16 @@ export default function Home() {
 
       <div id="how" className="max-w-6xl mx-auto px-4 pb-20 grid md:grid-cols-3 gap-6">
         <div className="rounded-lg border border-rose-200 bg-white p-6">
-          <h3 className="font-semibold text-rose-800">1. Send your memories</h3>
-          <p className="mt-2 text-rose-700/80">Share photos, videos, and messages you want in the edit.</p>
+          <h3 className="font-semibold text-rose-800">{t.step1Title}</h3>
+          <p className="mt-2 text-rose-700/80">{t.step1Desc}</p>
         </div>
         <div className="rounded-lg border border-rose-200 bg-white p-6">
-          <h3 className="font-semibold text-rose-800">2. We craft and encode</h3>
-          <p className="mt-2 text-rose-700/80">We design your custom video edit and engrave a unique QR on the wooden card.</p>
+          <h3 className="font-semibold text-rose-800">{t.step2Title}</h3>
+          <p className="mt-2 text-rose-700/80">{t.step2Desc}</p>
         </div>
         <div className="rounded-lg border border-rose-200 bg-white p-6">
-          <h3 className="font-semibold text-rose-800">3. Scan to relive</h3>
-          <p className="mt-2 text-rose-700/80">Scanning the QR opens your private link to the edit—anytime, anywhere.</p>
+          <h3 className="font-semibold text-rose-800">{t.step3Title}</h3>
+          <p className="mt-2 text-rose-700/80">{t.step3Desc}</p>
         </div>
       </div>
     </section>

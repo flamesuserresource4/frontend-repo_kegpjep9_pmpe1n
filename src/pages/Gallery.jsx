@@ -1,3 +1,5 @@
+import { useOutletContext } from 'react-router-dom'
+
 const photos = [
   { id: 1, src: 'https://i.postimg.cc/gjtW7Mz2/IMG-7787.jpg', title: 'Blush Maple • Heart QR' },
   { id: 2, src: 'https://i.postimg.cc/HnvgNSYC/IMG-7788.jpg', title: 'Natural • Classic QR' },
@@ -6,10 +8,23 @@ const photos = [
 ]
 
 export default function Gallery() {
+  const { lang } = useOutletContext()
+
+  const t = {
+    en: {
+      title: 'Gallery',
+      subtitle: 'A look at our wooden love cards and QR engravings.',
+    },
+    mk: {
+      title: 'Галерија',
+      subtitle: 'Поглед на нашите дрвени љубовни картички и QR гравури.',
+    },
+  }[lang]
+
   return (
     <section className="max-w-6xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-extrabold text-rose-800">Gallery</h1>
-      <p className="mt-2 text-rose-700/80">A look at our wooden love cards and QR engravings.</p>
+      <h1 className="text-3xl font-extrabold text-rose-800">{t.title}</h1>
+      <p className="mt-2 text-rose-700/80">{t.subtitle}</p>
 
       <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {photos.map((item) => (

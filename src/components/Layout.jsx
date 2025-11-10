@@ -9,6 +9,7 @@ const baseNavItems = [
 
 const translations = {
   en: {
+    // Brand stays constant per user request
     brand: 'LoveFrame MK',
     nav: {
       Home: 'Home',
@@ -20,7 +21,8 @@ const translations = {
     footer: (year) => `© ${year} SWMedia`,
   },
   mk: {
-    brand: 'Љубовна Рамка',
+    // Keep brand unchanged
+    brand: 'LoveFrame MK',
     nav: {
       Home: 'Почетна',
       Order: 'Нарачај',
@@ -116,7 +118,7 @@ export default function Layout() {
     <div className="min-h-screen flex flex-col bg-[#fff8f8]">
       <Navbar lang={lang} setLang={setLang} />
       <main className="flex-1">
-        <Outlet />
+        <Outlet context={{ lang }} />
       </main>
       <Footer lang={lang} />
     </div>
