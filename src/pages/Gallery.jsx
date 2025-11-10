@@ -1,8 +1,8 @@
 const photos = [
-  { id: 1, src: 'https://images.unsplash.com/photo-1692708897550-b74084973cf7?ixid=M3w3OTkxMTl8MHwxfHNlYXJjaHwxfHxCbHVzaCUyME1hcGxlJTIwJUUyJTgwJUEyJTIwSGVhcnQlMjBRUnxlbnwwfDB8fHwxNzYyNzg3MjUyfDA&ixlib=rb-4.1.0&w=1600&auto=format&fit=crop&q=80', title: 'Blush Maple • Heart QR' },
+  { id: 1, src: 'https://i.postimg.cc/gjtW7Mz2/IMG-7787.jpg', title: 'Blush Maple • Heart QR' },
   { id: 2, src: 'https://i.postimg.cc/HnvgNSYC/IMG-7788.jpg', title: 'Natural • Classic QR' },
-  { id: 3, src: 'https://images.unsplash.com/photo-1692708897550-b74084973cf7?ixid=M3w3OTkxMTl8MHwxfHNlYXJjaHwxfHxCbHVzaCUyME1hcGxlJTIwJUUyJTgwJUEyJTIwSGVhcnQlMjBRUnxlbnwwfDB8fHwxNzYyNzg3MjUyfDA&ixlib=rb-4.1.0&w=1600&auto=format&fit=crop&q=80', title: 'Warm Walnut • Frame QR' },
-  { id: 4, src: 'https://images.unsplash.com/photo-1692708897550-b74084973cf7?ixid=M3w3OTkxMTl8MHwxfHNlYXJjaHwxfHxCbHVzaCUyME1hcGxlJTIwJUUyJTgwJUEyJTIwSGVhcnQlMjBRUnxlbnwwfDB8fHwxNzYyNzg3MjUyfDA&ixlib=rb-4.1.0&w=1600&auto=format&fit=crop&q=80', title: 'Blush Maple • Duo' },
+  { id: 3, src: 'https://i.postimg.cc/W1nxNymm/IMG-7780.jpg', title: 'Warm Walnut • Frame QR' },
+  { id: 4, src: 'https://i.postimg.cc/y8P21GhF/IMG-7781.jpg', title: 'Blush Maple • Duo' },
 ]
 
 export default function Gallery() {

@@ -29,44 +29,6 @@ export default function Order() {
         </a>
       </div>
 
-      {/* Instagram Preview */}
-      <div className="mt-10 rounded-xl border border-rose-200 bg-white/70 backdrop-blur-sm p-6">
-        <div className="flex items-center justify-between">
-          <h2 className="font-semibold text-rose-800">Instagram preview</h2>
-          <a
-            href="https://www.instagram.com/loveframe_mk/"
-            target="_blank"
-            rel="noreferrer"
-            className="text-rose-600 hover:text-rose-700 font-medium"
-          >
-            See more ↗
-          </a>
-        </div>
-        <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-3">
-          {[
-            'https://i.postimg.cc/gjtW7Mz2/IMG-7787.jpg',
-            'https://i.postimg.cc/HnvgNSYC/IMG-7788.jpg',
-            'https://i.postimg.cc/W1nxNymm/IMG-7780.jpg',
-            'https://i.postimg.cc/y8P21GhF/IMG-7781.jpg',
-          ].map((src, idx) => (
-            <a
-              key={idx}
-              href="https://www.instagram.com/loveframe_mk/"
-              target="_blank"
-              rel="noreferrer"
-              className="group block overflow-hidden rounded-lg border border-rose-200 bg-white"
-            >
-              <img
-                src={src}
-                alt="LoveFrame MK preview"
-                className="aspect-square w-full object-cover transition-transform duration-200 group-hover:scale-[1.03]"
-                loading="lazy"
-              />
-            </a>
-          ))}
-        </div>
-      </div>
-
       {/* Next steps info */}
       <div className="mt-10 rounded-lg border border-rose-200 bg-white p-6">
         <h2 className="font-semibold text-rose-800">What happens next?</h2>
@@ -75,6 +37,16 @@ export default function Order() {
           <li>We create a custom edit and private link encoded into your card’s QR.</li>
           <li>We confirm design, engrave your wooden card, and ship it to you.</li>
         </ul>
+        <div className="mt-6">
+          <a
+            href="https://www.instagram.com/loveframe_mk/"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 text-rose-600 hover:text-rose-700 font-medium"
+          >
+            See our latest posts on Instagram ↗
+          </a>
+        </div>
       </div>
     </section>
   )
