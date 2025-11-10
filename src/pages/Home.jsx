@@ -32,7 +32,7 @@ export default function Home() {
                 <div className="absolute inset-0">
                   <iframe
                     title="Wooden card with QR code video"
-                    src="https://jumpshare.com/embed/MhSqgxl0xWKUQV05PNW4?autoplay=1&mute=1&muted=1&volume=0&loop=1&controls=0"
+                    src="https://jumpshare.com/embed/G8dtBGz0U49HUdWdpvGR?autoplay=1&mute=1&muted=1&volume=0&loop=1&controls=0"
                     allow="autoplay; fullscreen; picture-in-picture"
                     allowFullScreen
                     className="w-full h-full"
