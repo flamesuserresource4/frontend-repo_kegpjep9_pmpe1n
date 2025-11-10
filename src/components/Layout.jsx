@@ -13,7 +13,7 @@ function Navbar() {
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
           <span className="inline-block h-8 w-8 rounded-full bg-rose-200 border border-rose-300" />
-          <span className="font-semibold tracking-wide text-rose-700">Wooden Love Cards</span>
+          <span className="font-semibold tracking-wide text-rose-700">LoveFrame MK</span>
         </Link>
         <nav className="flex items-center gap-1">
           {navItems.map((item) => (
@@ -44,7 +44,7 @@ function Footer() {
         <p>
           Crafted with care • Light pink, bone white, and red accents
         </p>
-        <p className="mt-1">© {new Date().getFullYear()} Wooden Love Cards</p>
+        <p className="mt-1">© {new Date().getFullYear()} LoveFrame MK</p>
       </div>
     </footer>
   )
