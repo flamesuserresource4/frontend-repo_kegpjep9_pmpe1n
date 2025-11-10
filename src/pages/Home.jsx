@@ -25,10 +25,21 @@ export default function Home() {
         </div>
 
         <div className="relative">
-          <div className="aspect-[4/3] rounded-xl bg-[linear-gradient(135deg,#ffe4e6,#fff)] border border-rose-200 shadow-lg p-6 flex items-center justify-center">
-            <div className="text-center">
-              <div className="mx-auto mb-4 h-28 w-44 rounded-md bg-[conic-gradient(at_50%_50%,#fecdd3,#fef2f2,#fecdd3)] border border-rose-200 shadow-inner" />
-              <p className="text-sm text-rose-700/80">Example wooden card with QR</p>
+          <div className="aspect-[4/3] rounded-xl bg-[linear-gradient(135deg,#ffe4e6,#fff)] border border-rose-200 shadow-lg p-2 sm:p-3 md:p-4 flex items-center justify-center">
+            <div className="w-full h-full overflow-hidden rounded-lg border border-rose-200 shadow-inner">
+              {/* Embedded video replacing the placeholder "example wooden card with QR code" */}
+              <div className="relative w-full h-full">
+                <div className="absolute inset-0">
+                  <iframe
+                    title="Wooden card with QR code video"
+                    src="https://jumpshare.com/embed/MhSqgxl0xWKUQV05PNW4?autoplay=1&mute=1&loop=1"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                    style={{ border: 0 }}
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
