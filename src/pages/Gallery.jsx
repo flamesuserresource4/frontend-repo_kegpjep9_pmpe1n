@@ -28,7 +28,10 @@ export default function Gallery() {
 
       <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {photos.map((item) => (
-          <div key={item.id} className="group rounded-xl border border-rose-200 bg-white overflow-hidden hover:shadow-lg transition-shadow">
+          <div
+            key={item.id}
+            className="group rounded-xl border border-rose-200 bg-white overflow-hidden hover:shadow-lg transition-shadow"
+          >
             <div className="aspect-[4/3] bg-rose-50/40 flex items-center justify-center overflow-hidden">
               <img
                 src={item.src}
@@ -36,9 +39,6 @@ export default function Gallery() {
                 className="h-full w-full object-cover transition-transform duration-200 group-hover:scale-[1.03]"
                 loading="lazy"
               />
-            </div>
-            <div className="p-4">
-              <p className="font-medium text-rose-800">{item.title}</p>
             </div>
           </div>
         ))}
