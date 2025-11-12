@@ -32,38 +32,42 @@ export default function Home() {
 
   return (
     <section className="relative overflow-hidden">
-      <div className="absolute inset-0 pointer-events-none" aria-hidden>
+      {/* Background blobs behind everything */}
+      <div className="absolute inset-0 -z-10 pointer-events-none" aria-hidden>
         <div className="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-rose-100 blur-3xl" />
         <div className="absolute -bottom-24 -left-24 w-72 h-72 rounded-full bg-red-100 blur-3xl" />
       </div>
 
       <div className="max-w-6xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-10 items-center">
-        <div>
-          <h1 className="text-4xl md:text-5xl font-extrabold text-rose-800 leading-tight">
-            {t.h1}
-          </h1>
-          <p className="mt-4 text-rose-700/90 text-lg">
-            {t.p1}
-          </p>
-          <div className="mt-6 flex flex-wrap gap-3">
-            <a href="/order" className="inline-flex items-center gap-2 px-5 py-3 rounded-md bg-rose-600 text-white font-medium shadow hover:bg-rose-700 transition-colors">
-              {t.ctaOrder}
-            </a>
-            <a href="#how" className="inline-flex items-center gap-2 px-5 py-3 rounded-md border border-rose-300 text-rose-800 bg-white/70 hover:bg-white transition-colors">
-              {t.ctaHow}
-            </a>
+        <div className="relative">
+          {/* Foreground content box with its own background to sit above blurs */}
+          <div className="relative z-10">
+            <h1 className="text-4xl md:text-5xl font-extrabold text-rose-800 leading-tight">
+              {t.h1}
+            </h1>
+            <p className="mt-4 text-rose-700/90 text-lg">
+              {t.p1}
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <a href="/order" className="inline-flex items-center gap-2 px-5 py-3 rounded-md bg-rose-600 text-white font-medium shadow hover:bg-rose-700 transition-colors">
+                {t.ctaOrder}
+              </a>
+              <a href="#how" className="inline-flex items-center gap-2 px-5 py-3 rounded-md border border-rose-300 text-rose-800 bg-white/70 hover:bg-white transition-colors">
+                {t.ctaHow}
+              </a>
+            </div>
           </div>
         </div>
 
         <div className="relative">
           <div className="aspect-[4/3] rounded-xl bg-[linear-gradient(135deg,#ffe4e6,#fff)] border border-rose-200 shadow-lg p-2 sm:p-3 md:p-4 flex items-center justify-center">
             <div className="w-full h-full overflow-hidden rounded-lg border border-rose-200 shadow-inner">
-              {/* Embedded video replacing the placeholder "example wooden card with QR code" */}
+              {/* Replace Jumpshare with Google Drive preview iframe */}
               <div className="relative w-full h-full">
                 <div className="absolute inset-0">
                   <iframe
                     title="Wooden card with QR code video"
-                    src="https://jumpshare.com/embed/G8dtBGz0U49HUdWdpvGR?autoplay=1&mute=1&muted=1&volume=0&loop=1&controls=0"
+                    src="https://drive.google.com/file/d/1zy4ctvGMl_1k5SdxsoXr_hRas6J7ozNy/preview?autoplay=1&mute=1&loop=1&controls=0"
                     allow="autoplay; fullscreen; picture-in-picture"
                     allowFullScreen
                     className="w-full h-full"

@@ -27,21 +27,28 @@ export default function Gallery() {
       <p className="mt-2 text-rose-700/80">{t.subtitle}</p>
 
       <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {photos.map((item) => (
-          <div
-            key={item.id}
-            className="group rounded-xl border border-rose-200 bg-white overflow-hidden hover:shadow-lg transition-shadow"
-          >
-            <div className="aspect-[4/3] bg-rose-50/40 flex items-center justify-center overflow-hidden">
-              <img
-                src={item.src}
-                alt={item.title}
-                className="h-full w-full object-cover transition-transform duration-200 group-hover:scale-[1.03]"
-                loading="lazy"
-              />
+        {photos.map((item) => {
+          const isDuo = item.id === 4 // keep the two-piece photo as-is
+          return (
+            <div
+              key={item.id}
+              className="group rounded-xl border border-rose-200 bg-white overflow-hidden hover:shadow-lg transition-shadow"
+            >
+              <div className="aspect-[4/3] bg-rose-50/40 flex items-center justify-center overflow-hidden">
+                <img
+                  src={item.src}
+                  alt={item.title}
+                  className={[
+                    'max-h-full max-w-full transition-transform duration-200',
+                    'group-hover:scale-[1.02]',
+                    isDuo ? 'h-full w-full object-cover object-center' : 'h-full w-full object-contain object-center',
+                  ].join(' ')}
+                  loading="lazy"
+                />
+              </div>
             </div>
-          </div>
-        ))}
+          )
+        })}
       </div>
     </section>
   )
